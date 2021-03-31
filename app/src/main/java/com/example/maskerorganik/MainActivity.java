@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private RecyclerView rvClub;
+    private RecyclerView rvMaskerOrganik;
     private ArrayList<MaskerOrganik> list = new ArrayList<>();
 
     @Override
@@ -18,17 +18,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rvClub = findViewById(R.id.rv_masker);
-        rvClub.setHasFixedSize(true);
+        rvMaskerOrganik = findViewById(R.id.rv_masker);
+        rvMaskerOrganik.setHasFixedSize(true);
 
         list.addAll(MaskerData.getListData());
         showRecyclerList();
     }
 
     private void showRecyclerList(){
-        rvClub.setLayoutManager(new LinearLayoutManager(this));
+        rvMaskerOrganik.setLayoutManager(new LinearLayoutManager(this));
         ListMaskerAdapter listClubAdapter = new ListMaskerAdapter(list);
-        rvClub.setAdapter(listClubAdapter);
+        rvMaskerOrganik.setAdapter(listClubAdapter);
 
         listClubAdapter.setOnItemClickCallback(new ListMaskerAdapter.OnItemClickCallback() {
             @Override
