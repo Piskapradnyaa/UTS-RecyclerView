@@ -3,7 +3,7 @@ package com.example.maskerorganik;
 import java.util.ArrayList;
 
 public class MaskerData {
-    private static String [] clubName ={
+    private static String [] maskerName ={
             "Daisy" ,
             "Camille" ,
             "SunnyShine" ,
@@ -14,7 +14,7 @@ public class MaskerData {
 
 
     };
-    private static String[] clubDetail= {
+    private static String[] maskerDetail= {
             "Daisy Organik merupakan local brand masker organik bubuk yang menggunakan bahan natural berupa oat, milk, greentea, chocolate, strawberry dan dikombinasikan dengan klaim produk serta sesuai dengan kebutuhan kulit kita" ,
             "Camille Beaute merupakn brand masker local yang sangat populer di kalangan remaja. Dengan ingredients yang natural masker camille ini sangat bermanfaat untuk mengatasi masalah kulit remaja. Makser ini sudah BPOM dan aman dipakai untuk semua kalangan.",
             "SunnyShine merupakan masker organik yang baru ini populer. Mereka mengklaim 2 jenis masker yaitu masker wash off dan feel of dengan banyak varian. Baru-baru ini masker SunnyShine sudah dikatakan BPOM dan siap didistribusikan lagi.",
@@ -24,7 +24,7 @@ public class MaskerData {
             "Prettywell.co merupakan masker organik yang baru saja dirilis dan sudah memenuhi standar BPOM. Masker ini memiliki 2 jenis varian masker yang baik untuk kulit wajah."
     };
 
-    private static int[] clubImage = {
+    private static int[] maskerImage = {
             R.drawable.daisy,
             R.drawable.camille,
             R.drawable.sunny,
@@ -35,14 +35,14 @@ public class MaskerData {
 
     };
 
-static ArrayList<MaskerOrganik> getListData(){
+    static ArrayList<MaskerOrganik> getListData(){
     ArrayList<MaskerOrganik> list = new ArrayList<>();
-    for (int position = 0; position <clubName.length; position++) {
-        MaskerOrganik club = new MaskerOrganik();
-        club.setName(clubName[position]);
-        club.setDetail(clubDetail[position]);
-        club.setPhoto(clubImage[position]);
-        list.add(club);
+    for (int position = 0; position <maskerName.length; position++) {
+        MaskerOrganik masker= new MaskerOrganik();
+        masker.setName(maskerName[position]);
+        masker.setDetail(maskerDetail[position]);
+        masker.setPhoto(maskerImage[position]);
+        list.add(masker);
     }
     return list;
 }
