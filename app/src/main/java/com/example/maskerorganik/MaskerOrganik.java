@@ -65,4 +65,4 @@ public class MaskerOrganik implements Parcelable {
     public void setPhoto(int photo) {
         this.photo = photo;
     }
-}
+
