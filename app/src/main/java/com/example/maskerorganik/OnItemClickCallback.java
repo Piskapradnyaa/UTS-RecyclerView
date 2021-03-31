@@ -1,5 +1,5 @@
 package com.example.maskerorganik;
 
 public interface OnItemClickCallback {
-    void onItemClicked(MaskerOrganik club);
+    void onItemClicked(MaskerOrganik masker);
 }
