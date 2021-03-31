@@ -7,28 +7,28 @@
     tools:context=".DetailMaskerMainActivity">
 
     <ImageView
-        android:id="@+id/imgmasker"
+        android:id="@+id/imgMsk"
         android:layout_width="450dp"
         android:layout_height="450dp"
         android:background="@color/black"/>
 
     <TextView
-        android:id="@+id/tvmaskerName"
+        android:id="@+id/tv_namaMsk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginTop="470dp"
-        android:text="@string/club_name"
+        android:text="Nama Masker Organik"
         android:layout_marginLeft="20dp"
         />
 
     <TextView
-        android:id="@+id/tvmaskerDetail"
+        android:id="@+id/tvDetailMsk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvmaskerName"
-        android:text="@string/detail"
+        android:layout_below="@+id/tv_namaMsk"
+        android:text="Detail"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"/>
 
