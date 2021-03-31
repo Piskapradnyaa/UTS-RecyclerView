@@ -15,7 +15,7 @@ import com.bumptech.glide.request.RequestOptions;
 import java.util.ArrayList;
 
 public class ListMaskerAdapter extends RecyclerView.Adapter<ListMaskerAdapter.ListViewHolder> {
-    private ArrayList<MaskerOrganik> listClub;
+    private ArrayList<MaskerOrganik> listMaskerOrganik;
 
     private OnItemClickCallback onItemClickCallback;
 
@@ -24,7 +24,7 @@ public class ListMaskerAdapter extends RecyclerView.Adapter<ListMaskerAdapter.Li
     }
 
     public ListMaskerAdapter(ArrayList<MaskerOrganik>list) {
-        this.listClub = list;
+        this.listMaskerOrganik = list;
     }
     @NonNull
     @Override
@@ -35,7 +35,7 @@ public class ListMaskerAdapter extends RecyclerView.Adapter<ListMaskerAdapter.Li
 
     @Override
     public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
-        MaskerOrganik club = listClub.get(position);
+        MaskerOrganik club = listMaskerOrganik.get(position);
         Glide.with(holder.itemView.getContext())
                 .load(club.getPhoto())
                 .apply(new RequestOptions().override(55,55))
@@ -46,7 +46,7 @@ public class ListMaskerAdapter extends RecyclerView.Adapter<ListMaskerAdapter.Li
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onItemClickCallback.onItemClicked(listClub.get(holder.getAdapterPosition()));
+                onItemClickCallback.onItemClicked(listMaskerOrganik.get(holder.getAdapterPosition()));
             }
         });
 
@@ -55,7 +55,7 @@ public class ListMaskerAdapter extends RecyclerView.Adapter<ListMaskerAdapter.Li
 
     @Override
     public int getItemCount() {
-        return listClub.size();
+        return listMaskerOrganik.size();
     }
 
     class ListViewHolder extends RecyclerView.ViewHolder {
@@ -65,13 +65,13 @@ public class ListMaskerAdapter extends RecyclerView.Adapter<ListMaskerAdapter.Li
 
         ListViewHolder(View itemview) {
             super(itemview);
-            imgPhoto = itemview.findViewById(R.id.img_item_club);
+            imgPhoto = itemview.findViewById(R.id.img_item_msk);
             tvName = itemview.findViewById(R.id.tv_item_name);
             tvDetail = itemview.findViewById(R.id.tv_detail);
         }
     }
 
     public interface OnItemClickCallback {
-        void onItemClicked(MaskerOrganik data);
+        void onItemClicked(MaskerOrganik masker);
     }
 }
