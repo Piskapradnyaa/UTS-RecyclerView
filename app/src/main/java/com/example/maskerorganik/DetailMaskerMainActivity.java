@@ -16,17 +16,17 @@ public class DetailMaskerMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_masker_main);
 
-        ImageView imgClub = findViewById(R.id.imgmasker);
-        TextView tvClubName = findViewById(R.id.tvmaskerName);
-        TextView tvClubDetail = findViewById(R.id.tvmaskerDetail);
+        ImageView imgMsk = findViewById(R.id.imgMsk);
+        TextView tvMskName= findViewById(R.id.tv_namaMsk);
+        TextView tvMskDetail= findViewById(R.id.tvDetailMsk);
 
-        MaskerOrganik club = getIntent().getParcelableExtra(ITEM_EXTRA);
-        if(club != null){
+        MaskerOrganik masker = getIntent().getParcelableExtra(ITEM_EXTRA);
+        if(masker != null){
             Glide.with(this)
-                    .load(club.getPhoto())
-                    .into(imgClub);
-            tvClubName.setText(club.getName());
-            tvClubDetail.setText(club.getDetail());
+                    .load(masker.getPhoto())
+                    .into(imgMsk);
+            tvMskName.setText(masker.getName());
+            tvMskDetail.setText(masker.getDetail());
         }
         if (getSupportActionBar() != null){
             getSupportActionBar().setTitle("Detail Masker");
